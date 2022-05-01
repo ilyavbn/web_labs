@@ -4,6 +4,15 @@ body{
     line-height: 1.6;
     color: #333;
     font-family: 'Radio Canada', sans-serif;
+
+    /*Background gradient*/
+    background: repeating-linear-gradient(
+    45deg,
+    #B4CFB0 ,
+    #B4CFB0 35px,
+    #94B49F 35px,
+    #94B49F 70px
+    );
 }
 
 *,
@@ -21,8 +30,13 @@ a {
 }
 
 .header__logo a:visited {
-    color: black;
+    color: #789395;
 
+}
+
+.header__logo a:hover {
+
+    color: black;
 }
 /*Container*/
 .container {
@@ -32,24 +46,27 @@ a {
 }
 
 .header {
-    background-color: #FFEEEE;
+    background-color: #E5E3C9;
     border-radius: 10px;
     margin: 5px auto;
+    opacity: 0.9;
+
 }
 
 /*Intro*/
-.intro {
-    background-color: white;
-    width: 100%;
-    height: 100vh;
-    background: url("../images/intro.jpg") 
-    center no-repeat;
-}
+/* .intro { */
+/*  */
+/*     width: 100%; */
+/*     height: 100vh; */
+/*     background: url("../images/intro.jpg")  */
+/*     center no-repeat; */
+/* } */
 
 .header__logo {
     font-size: 30px;
     font-weight: 700;
     margin-left: 20px;
+    color: #789395;
 }
 
 .header__inner {
@@ -69,18 +86,30 @@ a {
     vertical-align: top;
     transition: color .2s linear;
     margin: 0 20px;
+    color: black;
 }
 .nav a:hover {
-    color: grey;
+    color: #789395;
 }
 
 .reg__button{
     justify-content:center;
     display: flex;
     align-items: center;
-    margin: -130px 0 0 0;
+    margin: 130px 0 0 0;
    }
 
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #94B49F;
+    color: #fff;
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+    max-width: 1200px;
+
+}
 /* CSS */
 .button-17 {
     margin: auto;
@@ -128,6 +157,7 @@ a {
 }
 
 .reg__form {
+    margin-top: 100px;
     justify-content:center;
     display: flex;
     align-items: center;
@@ -299,8 +329,9 @@ button:focus {
 .overlay {
 
 
-  background: -webkit-linear-gradient(#8CA6DB, #B993D6);
-  background: linear-gradient(#8CA6DB, #B993D6);
+  /* background: -webkit-linear-gradient(#8CA6DB, #B993D6); */
+  /* background: linear-gradient(#8CA6DB, #B993D6); */
+    background-color: #789395;
   opacity: 0.85;
   filter: alpha(opacity=85);
   height: 560px;
