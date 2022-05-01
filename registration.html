@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
+    <script src="libs/jquery-3.6.0.min.js"></script>
 	<title></title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <nav class="nav">
                     <a href="#">History</a>
                     <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </nav>
             </div>
         </header>
@@ -27,7 +28,7 @@
     <div class='content'>
       <div class='welcome'>Registration!</div>
       <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div>
-      <form action="getdata.php" method="post" onsubmit="return validate(this);">
+      <form action="backend/getdata.php" method="post" onsubmit="return validate(this);">
       <div class='input-fields'>
         <input type='text' placeholder='Username' name='username_input' class='input-line full-width' id='username_input'></input>
         <input type='email' placeholder='Email' name="email_input" class='input-line full-width' id='email_input'></input>
@@ -94,10 +95,7 @@
 
   })();
 </script>
-<script src="validation_input.js"></script>
-<script src="timer.js"></script>
+<script src="js/validation_input.js"></script>
+<script src="js/timer.js"></script>
 </body>
 </html>
-
-<!-- HTML !-->
-
