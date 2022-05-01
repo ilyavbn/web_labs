@@ -9,16 +9,25 @@
 	<title></title>
 </head>
 <body>
-    <script src="header.js"></script>
 <div class='bold-line'></div>
 <div class='container'>
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__logo"><a href="index.html">NPU</a></div>
+                <nav class="nav">
+                    <a href="#">History</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
     <div class="reg__form">
   <div class='window'>
     <div class='overlay'></div>
     <div class='content'>
       <div class='welcome'>Registration!</div>
       <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div>
-      <form action="getdata.php" method="post" onsubmit="return validate();">
+      <form action="getdata.php" method="post" onsubmit="return validate(this);">
       <div class='input-fields'>
         <input type='text' placeholder='Username' name='username_input' class='input-line full-width' id='username_input'></input>
         <input type='email' placeholder='Email' name="email_input" class='input-line full-width' id='email_input'></input>
@@ -40,29 +49,36 @@
 <!-- Простой попап диалог с формой -->
 <dialog id="favDialog">
   <form method="dialog">
-    <section>
-      <p><label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select></p>
-    </section>
+      <div class="fav__name">
+          <p><b>Username</b> may include _ and - having a length of 3 to 16 characters.</p>
+      </div>
+      <div class="fav__email"><b>Valid email </b>- mail@testing.com</div>
+      <div class="fav__pass">
+          <p><b>Password</b> rules: </p>
+          <ul>
+            <li>At least one upper case English letter</li>
+            <li>At least one lower case English letter</li>
+            <li>At least one digit</li>
+            <li>At least one special character or space</li>
+            <li>Minimum eight in length</li>
+          </ul>
+      </div>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="submit" type="submit">Ok</button>
+      <button id="cancel" type="reset">Not ok</button>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Update details</button>
-</menu>
+<div class="container">
+    <div id="block__help__button">
+      <button id="help__button">?</button>
+    </div>
+</div>
 
 <script>
   (function() {
-    var updateButton = document.getElementById('updateDetails');
+    var updateButton = document.getElementById('help__button');
     var cancelButton = document.getElementById('cancel');
     var favDialog = document.getElementById('favDialog');
 
@@ -79,6 +95,7 @@
   })();
 </script>
 <script src="validation_input.js"></script>
+<script src="timer.js"></script>
 </body>
 </html>
 

@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -47,7 +48,6 @@ a {
 
 .header {
     background-color: #E5E3C9;
-    border-radius: 10px;
     margin: 5px auto;
     opacity: 0.9;
 
@@ -363,4 +363,35 @@ button:focus {
     width: 100%;
     height: 100%;
   }
+}
+
+#block__help__button {
+    justify-content:center;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+#help__button {
+    text-align:center;
+    padding: 10px 20px;
+    border-radius: 200px;
+    background-color: #DDDEC5;
+    border-color: #83A08D;
+    font-size: 12pt;
+}
+
+#favDialog {
+   background-color: #DDDEC5; 
+   border-color: #7C9897;
+
+}
+#favDialog menu button {
+   background-color: #DDDEC5 ; 
+   border-color: #294342;
+}
+#favDialog menu button:hover{
+   background-color: #234342 ; 
+   border-color: #DDDEC5;
+   color: white;
 }
