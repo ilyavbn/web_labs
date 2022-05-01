@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+    class Student{
+        constructor(name, surname, age, course){
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+            this.course = course;
+
+        }
+
+        GetOlder(age) {
+            this.age = age;
+        }
+
+        ChangeSurname(surname) {
+            this.surname = surname;
+        }
+
+        MoveToSecondCourse () {
+            this.course += 1;
+        }
+    }
+
+    let S = new Student('Ilya','Groz',12, 2);
+
+    S.MoveToSecondCourse();
+    S.GetOlder(21);
+    S.ChangeSurname('Ivanov');
+
+    console.log(S.course);
+    console.log(S.age);
+    console.log(S.surname);
+
+
+    /*Sort text*/
+
+    var input = prompt("sadf");
+
+    console.log(sortText(input));
+
+    function sortText(text){
+        var words = text.split(' ');
+        words.sort();
+        return words;
+    }
+    </script>
+</body>
+</html>
